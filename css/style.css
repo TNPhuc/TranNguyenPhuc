@@ -327,6 +327,45 @@ span{
   margin-top: 2rem;
   cursor: pointer;
 }
+
+/* Blog container CSS */
+.blog{
+  background: var(--second-bg-color);
+}
+
+.blog h2{
+  font-size: 4.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px
+}
+
+.blog-item {
+  flex: 1;
+  text-align: center;
+  margin: 30px;
+}
+
+.blog-item img {
+  width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.blog-item .btn {
+  margin-top: 10px;
+  align-self: flex-end;
+  text-align: center;
+}
+
 /* Footer */
 .footer{
   display: flex;
@@ -334,7 +373,7 @@ span{
   align-items: center;
   flex-wrap: wrap;
   padding: 2rem 9%;
-  background: var(--second-bg-color);
+  background: var(--bg-color);
 }
 .footer-text{
   font-size: 1.6rem;
