@@ -73,6 +73,7 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--second-bg-color);
 }
 span{
   color: var(--main-color);
@@ -162,7 +163,8 @@ span{
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  background: var(--second-bg-color);
+  background: var(--bg-color);
+  height: auto;
 }
 .about-content{
   padding: 50px;
@@ -222,7 +224,7 @@ span{
 }
 /* Portfolio */
 .portfolio{
-  background: var(--bg-color);
+  background: var(--second-bg-color);
 }
 .portfolio h2{
   font-size: 4.5rem;
@@ -330,40 +332,48 @@ span{
 
 /* Blog container CSS */
 .blog{
-  background: var(--second-bg-color);
+  background: var(--bg-color);
 }
 
 .blog h2{
   font-size: 4.5rem;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 50px;
 }
 
 .blog-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   align-items: center;
-  flex-wrap: wrap;
-  margin-top: 50px
+  justify-items: center;
 }
 
 .blog-item {
-  flex: 1;
-  text-align: center;
-  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .blog-item img {
-  width: 500px;
+  width: 100%;
   height: auto;
-  display: block;
-  margin: 0 auto 10px;
 }
 
 .blog-item .btn {
-  margin-top: 10px;
-  align-self: flex-end;
+  margin-top: 25px;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .blog-item img {
+    max-width: 100%; /* Full width on smaller screens */
+  }
 }
 
 /* Footer */
@@ -373,7 +383,7 @@ span{
   align-items: center;
   flex-wrap: wrap;
   padding: 2rem 9%;
-  background: var(--bg-color);
+  background: var(--second-bg-color);
 }
 .footer-text{
   font-size: 1.6rem;
